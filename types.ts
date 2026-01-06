@@ -10,7 +10,6 @@ export enum AppStep {
   ORDER_STATUS = 'ORDER_STATUS',
   COLLECTION_QR = 'COLLECTION_QR',
   ORDER_COMPLETED = 'ORDER_COMPLETED',
-  USER_PROFILE = 'USER_PROFILE',
   ADMIN_DASHBOARD = 'ADMIN_DASHBOARD'
 }
 
@@ -20,6 +19,7 @@ export interface MenuItem {
   price: number;
   isFree: boolean;
   image: string;
+  category: string;
 }
 
 export interface CartItem extends MenuItem {
@@ -30,6 +30,9 @@ export interface OrderRecord {
   id: string;
   date: string;
   items: CartItem[];
+  subtotal: number;
+  tax: number;
   total: number;
-  status: 'COMPLETED' | 'CANCELLED';
+  status: 'Pending' | 'Accepted' | 'Preparing' | 'Ready' | 'Completed';
+  userId: string;
 }
