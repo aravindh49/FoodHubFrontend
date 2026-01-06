@@ -1,0 +1,5 @@
+{
+  "name": "FoodHub - Corporate Meal Ordering",
+  "description": "A sleek, professional food ordering platform designed for corporate environments with OTP authentication, free meal tracking, and real-time order status.",
+  "requestFramePermissions": []
+}
